@@ -3,14 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Chap12;
+package Chap13;
 
 /**
  *
  * @author Conrad
  */
 public class Clothing {
-// fields with default values
     private int itemID;
     private String desc;
     private char colorCode;
@@ -23,7 +22,6 @@ public class Clothing {
         System.out.println("Price: " + getPrice());
     }
 
-// Constructor
     public Clothing(int itemID, String desc, char colorCode, double price) {
         this.itemID = itemID;
         this.desc = desc;

@@ -9,9 +9,9 @@ package Chap10;
  *
  * @author Conrad
  */
-public class Employees {
+public class Employees2 {
     public String name1 = "Fred Smith";
-    public String name2 = "Sam Smith";
+    public String name2 = "fred Smith";
     
     public void areNamesEqual() {
         if (name1.equals(name2)) {
@@ -22,9 +22,19 @@ public class Employees {
         }
     }
     
+    public void areNamesEqual2() {
+        if (name1.equalsIgnoreCase(name2)) {
+            System.out.println("Same name.");
+        }
+        else {
+            System.out.println("Different name.");
+        }
+    }
+    
     public static void main(String[] args) {
-        Employees emp1 = new Employees();
+        Employees2 emp1 = new Employees2();
         
         emp1.areNamesEqual();
+        emp1.areNamesEqual2();
     }
 }

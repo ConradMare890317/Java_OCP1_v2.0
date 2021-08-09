@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Chap12;
+package Chap13;
 
 /**
  *
@@ -12,18 +12,8 @@ package Chap12;
 public class Socks extends Material {
     private double price;
     
-    Material sock01 = new Socks();
-    
-    String happySock = ((Material)sock01).getMaterialType1();
-    
     @Override
     public double getPrice(){
         return price;
-    }
-
-    @Override
-    public void display() {
-        throw new UnsupportedOperationException("Not supported yet."); 
-        //To change body of generated methods, choose Tools | Templates.
     }
 }

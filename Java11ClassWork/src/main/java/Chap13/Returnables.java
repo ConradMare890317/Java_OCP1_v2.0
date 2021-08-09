@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Chap10;
+package Chap13;
 
 /**
  *
  * @author Conrad
  */
-public class Main {
-    
+public interface Returnables {
+    public String doReturn();
 }
