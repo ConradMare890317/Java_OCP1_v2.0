@@ -3,18 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package java11_ocp1;
+package Chap11;
 
 /**
  *
  * @author Conrad
  */
-public class Java11_OCP1 {
-
-    /**
-     * @param args the command line arguments
-     */
+public class continueKeyWord {
     public static void main(String[] args) {
-        System.out.println("Hello!");
+        for(int i = 0; i < 50; i++) {
+            if(i % 2 != 0) {
+                continue;
+            }
+            System.out.println(1);
+        }
     }
 }

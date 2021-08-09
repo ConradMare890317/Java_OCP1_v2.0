@@ -3,18 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package java11_ocp1;
+package Chap07;
 
 /**
  *
  * @author Conrad
  */
-public class Java11_OCP1 {
+public class Main {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("Hello!");
+        String myName = "John Doe";
+        myName = "Jon Dohe";
+        
+        System.out.println("Name: "+myName);
+        // TODO code application logic here
     }
+    
 }

@@ -3,18 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package java11_ocp1;
+package Chap11;
 
+import java.util.ArrayList;
 /**
  *
  * @author Conrad
  */
-public class Java11_OCP1 {
-
-    /**
-     * @param args the command line arguments
-     */
+public class arrayList {
     public static void main(String[] args) {
-        System.out.println("Hello!");
+        ArrayList<String> names = new ArrayList();
+        
+        names.add("Jamie");
+        names.add(2, "Thoni");
+        
+        System.out.println(names.get(1));
     }
+    
 }
