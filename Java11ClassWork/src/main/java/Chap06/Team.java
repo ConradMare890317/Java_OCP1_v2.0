@@ -8,7 +8,7 @@ package Chap06;
 
 /**
  *
- * @author Administrator
+ * @author Conrad
  */
 public class Team {
     
