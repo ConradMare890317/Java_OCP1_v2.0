@@ -8,7 +8,7 @@ package soccer;
 
 /**
  *
- * @author Administrator
+ * @author Conrad
  */
 public class Goal {
     
