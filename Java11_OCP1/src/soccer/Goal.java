@@ -3,13 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package soccer;
 
 /**
  *
- * @author Conrad
+ * @author Administrator
  */
 public class Goal {
+    
     private Team theTeam;
     private Player thePlayer;
     private double theTime;
@@ -55,4 +57,5 @@ public class Goal {
     public void setTheTime(double theTime) {
         this.theTime = theTime;
     }
+    
 }

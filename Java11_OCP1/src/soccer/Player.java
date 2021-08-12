@@ -18,7 +18,6 @@ public class Player {
     }
     
     public Player() {}
-    
 
     /**
      * @return the playerName
