@@ -9,8 +9,8 @@ import utility.GameUtils;
 
 /**
  *
- * @author  Conrad
-*/
+ * @author Conrad
+ */
 public class Game {
     
     private Team homeTeam;
@@ -65,10 +65,10 @@ public class Game {
             this.awayTeam.incPointsTotal(1);
         } else if (homeTeamGoals > awayTeamGoals) {
             returnString.append(homeTeam.getTeamName() + " win");
-            this.homeTeam.incPointsTotal(1);
+            this.homeTeam.incPointsTotal(2);
         } else {
             returnString.append(awayTeam.getTeamName() + " win");
-            this.awayTeam.incPointsTotal(1);
+            this.awayTeam.incPointsTotal(2);
         }
         returnString.append(" (" + homeTeamGoals + " - " + awayTeamGoals + ") \n");
         
