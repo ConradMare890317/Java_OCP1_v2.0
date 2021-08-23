@@ -5,6 +5,12 @@
  */
 package soccer;
 
+import java.time.LocalDateTime;
+import java.time.Period;
+import java.util.ArrayList;
+import java.util.StringTokenizer;
+import utility.PlayerDatabase;
+
 /**
  *
  * @author Conrad
@@ -18,11 +24,16 @@ public class League {
         
         League theLeague = new League();
 
-        Team[] theTeams = theLeague.createTeams();
+        Team[] theTeams = theLeague.createTeams("The Robins,The Crows,The Swallows", 5);
         Game[] theGames = theLeague.createGames(theTeams);
 
+        System.out.println(theLeague.getLeagueAnnouncement(theGames));
         for (Game currGame: theGames){
             currGame.playGame();
+            
+            /* Practice 12-1. Add a break command here */
+            
+            /* Practice 12-1. Comment out the line below */
             System.out.println(currGame.getDescription());
         }
         
@@ -30,37 +41,38 @@ public class League {
 
     }
 
-    public Team[] createTeams() {
+    public Team[] createTeams(String teamNames, int teamSize) {
 
-        Player player1 = new Player("George Eliot");
-        Player player2 = new Player("Graham Greene");
-        Player player3 = new Player("Geoffrey Chaucer");
-        Player[] thePlayers = {player1, player2, player3};
-
-        Team team1 = new Team("The Greens", thePlayers);
-
-        // Create team2
-        Team team2 = new Team();
-        team2.setTeamName("The Reds");
-        team2.setPlayerArray(new Player[3]);
-        team2.getPlayerArray()[0] = new Player("Robert Service");
-        team2.getPlayerArray()[1] = new Player("Robbie Burns");
-        team2.getPlayerArray()[2] = new Player("Rafael Sabatini");
-
-        Team[] theTeams = {team1, team2};
+        PlayerDatabase playerDB = new PlayerDatabase();
         
-        
-        
+        StringTokenizer teamNameTokens = new StringTokenizer(teamNames, ",");
+        Team[] theTeams = new Team[teamNameTokens.countTokens()];
+        for (int i =0; i < theTeams.length; i++){
+             theTeams[i] = new Team(teamNameTokens.nextToken(), playerDB.getTeam(teamSize));
+        }
+       
+
         return theTeams;
     }
 
     public Game[] createGames(Team[] theTeams) {
-        Game theGame = new Game(theTeams[0], theTeams[1]);
-        Game theGame2 = new Game(theTeams[1], theTeams[0]);
-        Game theGame3 = new Game(theTeams[0], theTeams[1]);
-        Game theGame4 = new Game(theTeams[1], theTeams[0]);
-        Game[] theGames = {theGame, theGame2, theGame3, theGame4};
-        return theGames;
+        int daysBetweenGames = 0;
+        
+        ArrayList theGames = new ArrayList();
+        
+        for (Team homeTeam: theTeams){
+            for (Team awayTeam: theTeams){
+               if (homeTeam != awayTeam) {
+                   daysBetweenGames += 7;
+                   theGames.add(new Game(homeTeam, awayTeam, LocalDateTime.now().plusDays(daysBetweenGames)));
+               } 
+            
+            }
+        }
+        
+        
+        
+        return (Game[]) theGames.toArray(new Game[1]);
     }
     
     public void showBestTeam(Team[] theTeams) {
@@ -82,6 +94,16 @@ public class League {
         
         System.out.println("Winner of the League is " + currBestTeam.getTeamName());
         
+    }
+    
+    public String getLeagueAnnouncement(Game[] theGames){
+        
+        Period thePeriod = Period.between(theGames[0].getTheDateTime().toLocalDate(), 
+        theGames[theGames.length - 1].getTheDateTime().toLocalDate());
+        
+        return "The league is scheduled to run for " +
+        thePeriod.getMonths() + " month(s), and " +
+        thePeriod.getDays() + " day(s)\n";
     }
 
 }

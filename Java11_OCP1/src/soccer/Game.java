@@ -3,8 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package soccer;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import utility.GameUtils;
 
 /**
@@ -16,10 +19,12 @@ public class Game {
     private Team homeTeam;
     private Team awayTeam;
     private Goal[] goals;
+    private LocalDateTime theDateTime;
     
-    public Game(Team homeTeam, Team awayTeam) {
+    public Game(Team homeTeam, Team awayTeam, LocalDateTime theDateTime) {
         this.homeTeam = homeTeam;
         this.awayTeam = awayTeam;
+        this.theDateTime = theDateTime;
     }
     
     public void playGame(int maxGoals) {       
@@ -30,6 +35,7 @@ public class Game {
     }
     
     public void playGame() {
+        /* Practice 12-1. Remove the following line */
         playGame(6);
     }
     
@@ -40,7 +46,8 @@ public class Game {
         StringBuilder returnString = new StringBuilder();
         
         returnString.append(this.getHomeTeam().getTeamName() + " vs. " +
-        this.getAwayTeam().getTeamName() + "\n");
+        this.getAwayTeam().getTeamName() + "\n" + 
+               "Date: " + this.getTheDateTime().format(DateTimeFormatter.ISO_LOCAL_DATE) + "\n");
          
         for (Goal currGoal: this.getGoals()) {
             
@@ -65,10 +72,10 @@ public class Game {
             this.awayTeam.incPointsTotal(1);
         } else if (homeTeamGoals > awayTeamGoals) {
             returnString.append(homeTeam.getTeamName() + " win");
-            this.homeTeam.incPointsTotal(2);
+            this.homeTeam.incPointsTotal(1);
         } else {
             returnString.append(awayTeam.getTeamName() + " win");
-            this.awayTeam.incPointsTotal(2);
+            this.awayTeam.incPointsTotal(1);
         }
         returnString.append(" (" + homeTeamGoals + " - " + awayTeamGoals + ") \n");
         
@@ -115,6 +122,34 @@ public class Game {
      */
     public void setGoals(Goal[] goals) {
         this.goals = goals;
+    }
+
+    /**
+     * @return the localDateTime
+     */
+    public LocalDateTime getLocalDateTime() {
+        return getTheDateTime();
+    }
+
+    /**
+     * @param theDateTime the localDateTime to set
+     */
+    public void setLocalDateTime(LocalDateTime theDateTime) {
+        this.setTheDateTime(theDateTime);
+    }
+
+    /**
+     * @return the theDateTime
+     */
+    public LocalDateTime getTheDateTime() {
+        return theDateTime;
+    }
+
+    /**
+     * @param theDateTime the theDateTime to set
+     */
+    public void setTheDateTime(LocalDateTime theDateTime) {
+        this.theDateTime = theDateTime;
     }
       
 }
