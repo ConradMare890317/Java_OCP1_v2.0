@@ -10,7 +10,8 @@ package soccer;
  *
  * @author Conrad
  */
-public class Goal extends GameEvent {
+public class Possession extends GameEvent {
     
     /* Practice 13-1. Add a toString() method */
+    
 }
