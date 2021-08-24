@@ -32,10 +32,10 @@ public class Game {
         ArrayList <GameEvent> eventList = new ArrayList();
         GameEvent currEvent;
         for (int i = 1; i <=90; i++){
-            /* Practice 13-1. Change expression to Math.random > 0.8 */
+            
             if (Math.random() > 0.95){
                 currEvent = Math.random() > 0.6?new Goal():new Possession();
-                /* Practice 13-1. Change first part of ternary operator toMath.random > 0.8 */
+                
                 currEvent.setTheTeam(Math.random() > 0.5?homeTeam: awayTeam);
                 currEvent.setThePlayer(currEvent.getTheTeam().
                 getPlayerArray()[(int)(Math.random() * currEvent.getTheTeam().getPlayerArray().length)]);
@@ -61,7 +61,6 @@ public class Game {
          
         for (GameEvent currEvent: this.getEvents()) {
             
-            /* Practice 13-1. Start if block here to determine if currEvent is a Goal */
             if (currEvent.getTheTeam()== homeTeam) {
                 homeTeamGoals++;
                 homeTeam.incGoalsTotal(1);
@@ -69,7 +68,6 @@ public class Game {
                 awayTeamGoals++;
                 awayTeam.incGoalsTotal(1);
             }
-            /* Practice 13-1. End if block here to determine if currEvent is a Goal */
             
             returnString.append(currEvent +" after "
             + currEvent.getTheTime() + " mins by "

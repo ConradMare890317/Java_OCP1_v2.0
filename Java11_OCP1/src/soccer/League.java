@@ -48,7 +48,6 @@ public class League {
              theTeams[i] = new Team(teamNameTokens.nextToken(), playerDB.getTeam(teamSize));
         }
        
-
         return theTeams;
     }
 
@@ -66,8 +65,6 @@ public class League {
             
             }
         }
-        
-        
         
         return (Game[]) theGames.toArray(new Game[1]);
     }
@@ -90,7 +87,6 @@ public class League {
         }
         
         System.out.println("Winner of the League is " + currBestTeam.getTeamName());
-        
     }
     
     public String getLeagueAnnouncement(Game[] theGames){
@@ -102,5 +98,4 @@ public class League {
         thePeriod.getMonths() + " month(s), and " +
         thePeriod.getDays() + " day(s)\n";
     }
-
 }
