@@ -69,6 +69,7 @@ public class Game {
                     awayTeamGoals++;
                     awayTeam.incGoalsTotal(1);
                 }
+                currEvent.getThePlayer().incGoalsScored();
             }
             
             returnString.append(currEvent +" after "
