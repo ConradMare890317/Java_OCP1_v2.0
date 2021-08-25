@@ -12,6 +12,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.StringTokenizer;
 import utility.PlayerDatabase;
+import utility.PlayerDatabaseException;
 
 /**
  *
@@ -27,9 +28,12 @@ public class League {
         League theLeague = new League();
         
         /* Practice 14-1, Step 3a. Start a try block here */
+        try {
+            
+        
 
         /* Practice 14-1, Step 2a. Modify the line below to add more teams and players */
-        Team[] theTeams = theLeague.createTeams("The Robins,The Crows,The Swallows", 5);
+        Team[] theTeams = theLeague.createTeams("The Robins,The Crows,The Swallows, The Owls", 11);
         Game[] theGames = theLeague.createGames(theTeams);
 
         System.out.println(theLeague.getLeagueAnnouncement(theGames));
@@ -43,8 +47,11 @@ public class League {
         theLeague.showBestPlayers(theTeams);
         
         /* Practice 14-1, Step 3b. Close the try block here */
-        
+        }
         /* Practice 14-1, Step 3d. Add a catch block here */
+        catch (Exception e) {
+            e.printStackTrace(System.err);
+        }
 
     }
 
