@@ -20,7 +20,7 @@ public class Egret {
     }
     
     public Egret(String color) {
-        color = color;
+        this.color = color;
     }
  
     public static void main(String[] args) {
