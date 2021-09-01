@@ -15,5 +15,8 @@ public class Example3 {
         double x; // this declares a floating-point variable
         
         v = 10; // assign v the value 10
+        x = 10.0; // assign 10.0 to x
+        
+        
     }
 }
