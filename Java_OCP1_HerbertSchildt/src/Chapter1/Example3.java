@@ -17,6 +17,15 @@ public class Example3 {
         v = 10; // assign v the value 10
         x = 10.0; // assign 10.0 to x
         
+            System.out.println("Original value of v: " + v);
+            System.out.println("Original value of x: " + x);
+            System.out.println(); //print blank line
+            
+        // now, divide both by 4
+        v = v / 4;
+        x = x / 4;
         
+            System.out.println("v after division: " + v);
+            System.out.println("x after division: " + x);
     }
 }
