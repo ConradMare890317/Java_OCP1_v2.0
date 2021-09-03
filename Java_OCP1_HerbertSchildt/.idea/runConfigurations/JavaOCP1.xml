@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="JavaOCP1" type="AntRunConfiguration" editBeforeRun="true">
+    <antsettings antfile="file://$PROJECT_DIR$/build.xml" target="default" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
