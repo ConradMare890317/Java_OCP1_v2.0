@@ -19,3 +19,13 @@ public class ForDemo {
             System.out.println("Done!");
     }
 }
+
+
+/*
+Note!
+Professional Java program:
+    " for(count = 0; count < 5; count = count+1) " written as:
+    ' for(count = 0; count < 5; count++) ';
+
+!!!! INCREMENT OPERATOR = ++
+*/
