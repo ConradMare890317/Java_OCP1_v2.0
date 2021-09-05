@@ -25,7 +25,12 @@ public class FindAllTadPole {
     public static void main(String[] args) {
         List<Tadpole> tadpoles = new ArrayList<Tadpole>();
         for (Amphibian amphibian : tadpoles) {
-            __ tadpole = amphibian;
+             CanSwim tadpole = amphibian;
         }
     }
 }
+
+/*
+Statement.ln15 - " CanSwim tadpole = amphibian; ",
+    can be " CanSwim / Amphibian / Object " to run.
+*/
