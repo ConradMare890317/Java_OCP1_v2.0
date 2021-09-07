@@ -9,11 +9,13 @@ package Chapter2;
  *
  * @author Conrad
  */
-public class Sound {
+public class StrDemo {
     public static void main(String[] args) {
-        double dist;
-        
-        dist = 7.2 * 1100;
-        System.out.println("The AC/DC(Thunder) is " + dist + "feet away.");
+        System.out.println("First line\nSecond line"); //n Generates a new a line (Java = Python);
+        System.out.println("A\tB\tC");
+        System.out.println("D\tE\tF");
     }
 }
+
+
+// Use tabs to allign output => A, B, C, D, E, F.
