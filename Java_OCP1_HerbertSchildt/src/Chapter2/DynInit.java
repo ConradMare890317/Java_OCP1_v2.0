@@ -7,7 +7,7 @@ package Chapter2;
 
 /**
  *
- * @author conra
+ * @author Conrad
  */
 // Demo dynamic initialization:
 public class DynInit {
