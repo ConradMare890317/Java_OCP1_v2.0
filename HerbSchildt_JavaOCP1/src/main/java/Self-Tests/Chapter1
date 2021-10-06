@@ -1,0 +1,19 @@
+1. What is bytecode and why is it important to Java’s use for Internet programming?
+    Compilation of java code. Represents machine code, is processed by the JVM - java.virtual.machine.
+
+2. What are the three main principles of object oriented programming?
+    Encaptulation, Inheritance, Polymorphism.
+
+3. Where do Java programs begin execution?
+    Main function. "public static void main".
+
+4. What is a variable?
+    Name given to memory location.
+
+5. Which of the following variable names is invalid?
+a - count / b - $count / c - count27 / d - 67count ?  == "b".
+
+6. How do you create a single line comment? How do you create a multiline comment?
+    Single = "//",
+    Multi = "/*{code}*/ ".
+
